@@ -30,8 +30,112 @@ body {
     grid-template-rows: 1fr 4fr 4fr;
 }
 
-.header {
+header {
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    padding: 0px 1.75rem;
+}
+
+.user-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.25rem;
+}
+
+.action-btn {
+    border: none;
+    border-radius: 1rem;
+    background: #1992d4;
+    padding: 0.5rem 1.75rem;
+    font-weight: 500;
+    color: white;
+}
+
+.greeting-pfp {
+    max-height: 3.75rem;
+    border-radius: 50%;
+}
+
+.info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.greetings {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.greetings .name {
+    margin: 0px;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.greeting {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 0.75rem;
+}
+
+.search {
+    display: grid;
+    /* justify-content: space-between; */
+    grid-template-columns: 1.8fr 1fr;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+.search-area {
+    display: flex;
+    flex: 1;
+    gap: 1.25rem;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    max-height: 1.5rem;
+    min-width: 1.5rem;
+}
+
+.pfp {
+    border-radius: 50%;
+    max-width: 3rem;
+}
+
+.pfp-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.search-box {
+    flex: 1;
+    max-width: 100%;
+    border-radius: 25px / 25px;
+    border: none;
+    background-color: #e2e8f0;
 }
 
 .branding {
