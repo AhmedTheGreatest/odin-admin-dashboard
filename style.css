@@ -15,7 +15,7 @@ main {
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1.2fr 4fr;
+    grid-template-rows: 1fr 5fr;
     min-height: 100vh;
     margin: 0px;
 }
@@ -27,7 +27,7 @@ body {
 .sidebar {
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 1fr 4fr 4fr;
+    grid-template-rows: 5rem auto 1fr;
 }
 
 header {
@@ -195,4 +195,188 @@ header {
     color: white;
     text-decoration: none;
     font-weight: 700;
+}
+
+main {
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+    grid-template-areas: 
+        'projects announcements'
+        'projects trending';
+    padding: 1rem;
+    gap: 0.6rem;
+}
+
+.announcement {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1.25rem 0.8rem;
+}
+
+.announcement > h6 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0px;
+}
+
+.announcement > p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: grey;
+    text-overflow: ellipsis;
+}
+
+.announcement-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+hr {
+    margin: 0px 1rem;
+    color: rgba(128, 128, 128, 0.721);
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
+}
+
+.projects-heading,
+.announcements-heading,
+.trending-heading {
+    font-size: 1.25rem;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 0.75rem 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    border-radius: 0.75rem;
+    background-color: white;
+    grid-template-areas: 
+        'line info info'
+        'line . buttons';
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.orange-line {
+    background-color: orange;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    grid-area: line;
+}
+
+.project-name {
+    font-size: 1.25rem;
+    margin: 0px;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 0.92rem;
+    color: gray;
+    margin: 0px;
+}
+
+.project-btn {
+    border: none;
+    min-width: 1.65rem;
+    aspect-ratio: 1 / 1;
+}
+
+.project-btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: buttons;
+    justify-self: right;
+    margin-right: 2rem;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-info {
+    grid-area: info;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    margin-right: 1rem;
+}
+
+.favorite {
+    background: url('assets/icons/star-plus-outline.svg') no-repeat;
+}
+
+.eye {
+    background: url('assets/icons/eye-plus-outline.svg') no-repeat;
+}
+
+.share {
+    background: url('assets/icons/share-variant-outline.svg') no-repeat;
+}
+
+.trending-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.trending-pfp {
+    grid-row: 1 / 3;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.owner-tag {
+    padding: 0px;
+    margin: 0px;
+    align-self: end;
+    font-size: 0.9rem;
+}
+
+.trending-description {
+    padding: 0px;
+    margin: 0px;
+    align-self: first;
+    font-size: 0.9rem;
+    color: grey;
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: 3rem auto;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 0.75rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    filter: hue-rotate(20deg);
 }
